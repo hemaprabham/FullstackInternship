@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .payment-container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h1>UPI Payment</h1>
+        <form id="paymentForm">
+            <label for="upiId">Enter UPI ID:</label>
+            <input type="text" id="upiId" placeholder="example@upi">
+
+            <!-- Added bank input -->
+            <label for="bank">Select Bank:</label>
+            <input type="text" id="bank" placeholder="Enter bank name">
+
+            <button type="button" onclick="makePayment()">Make Payment</button>
+        </form>
+        <div id="paymentResult"></div>
+    </div>
+    <script>
+        function makePayment() {
+            var selectedBank = document.getElementById('bank').value;
+            var upiId = document.getElementById('upiId').value;
+
+            // Dummy logic for UPI payment
+            // In a real scenario, this would involve communication with a payment gateway
+            var paymentResult = simulatePayment(selectedBank, upiId);
+
+            // Display payment result
+            displayPaymentResult(paymentResult);
+
+            // Redirect to successfulpayment.html if payment is successful
+            if (paymentResult.success) {
+                window.location.href = 'successfulpayment.html';
+            }
+        }
+
+        function simulatePayment(selectedBank, upiId) {
+            // Dummy logic, replace with actual payment gateway integration
+            var success = Math.random() < 0.8; // 80% success rate
+            return {
+                success: success,
+                message: success ? 'Payment successful!' : 'Payment failed. Please try again.',
+                bank: selectedBank,
+                upiId: upiId
+            };
+        }
+
+        function displayPaymentResult(result) {
+            // Display the payment result in the 'paymentResult' div
+            var paymentResultElement = document.getElementById('paymentResult');
+            paymentResultElement.innerHTML = '<p>' + result.message + '</p>';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Pay Dummy Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4285f4;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #gpayLogo {
+      width: 100px; /* Adjust the size as needed */
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="googlePayForm">
+    <img src="data:image/jpeg;base64,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" alt="Google Pay Logo" id="gpayLogo">
+    
+    <label for="number">Gpay Number:</label>
+    <input type="text" id="number" name="number" required>
+
+    <label for="countryCode">Country Code:</label>
+    <select id="countryCode" name="countryCode">
+      <option value="+1">+1 (United States)</option>
+      <option value="+44">+44 (United Kingdom)</option>
+      <option value="+44">+91 (INDIA)</option>
+      
+      <!-- Add more country options as needed -->
+    </select>
+
+    
+    <button type="button" onclick="initiateGooglePay()">Pay with Google Pay</button>
+  </form>
+
+  <script src="https://pay.google.com/gp/p/js/pay.js"></script>
+  <script>
+    function initiateGooglePay() {
+      const paymentDataRequest = {
+        apiVersion: 2,
+        apiVersionMinor: 0,
+        allowedPaymentMethods: [{
+          type: 'CARD',
+          parameters: {
+            allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+            allowedCardNetworks: ['AMEX', 'DISCOVER', 'MASTERCARD', 'VISA'],
+          },
+          tokenizationSpecification: {
+            type: 'PAYMENT_GATEWAY',
+            parameters: {
+              gateway: 'example',
+              gatewayMerchantId: 'exampleGatewayMerchantId',
+            },
+          },
+        }],
+        merchantInfo: {
+          merchantName: 'Your Merchant Name',
+          merchantId: 'yourMerchantId',
+        },
+        transactionInfo: {
+          totalPriceStatus: 'FINAL',
+          totalPrice: (document.getElementById('amount').value * 100).toString(), // Amount in cents
+          currencyCode: 'USD', // Default currency code, you can modify this based on your requirements
+        },
+        callbackIntents: ['PAYMENT_AUTHORIZATION'],
+        shippingAddressRequired: true,
+        shippingAddressParameters: {
+          phoneNumberRequired: true,
+        },
+      };
+
+      const paymentsClient = new google.payments.api.PaymentsClient({
+        environment: 'TEST', // Use 'PRODUCTION' for real transactions
+      });
+
+      paymentsClient.loadPaymentData(paymentDataRequest).then(function (paymentData) {
+        // Handle the successful payment data response
+        console.log(paymentData);
+        alert('Payment successful!\nTransaction ID: ' + paymentData.transaction.id);
+      }).catch(function (error) {
+        // Handle errors
+        console.error(error);
+        alert('Error processing payment. Please try again.');
+      });
+    }
+  </script>
+
+</body>
+</html>
