@@ -1,0 +1,36 @@
+/* Style for the table container */
+.row.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Style for each column within a schedule item */
+.row.wrap > div {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Style for the time, title, author, hall, and more info button in each schedule item */
+.text__time,
+.mbr-text,
+.text__author,
+.text__hall {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Style for the button in each schedule item */
+.btn__table .btn {
+    font-size: 14px;
+}
+
+/* Optional: Add hover effect to the "More Info" button */
+.btn__table .btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}

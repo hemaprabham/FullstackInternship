@@ -1,0 +1,118 @@
+{% load static %}
+
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'assets\css\bootstrap-grid.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets\css\bootstrap-reboot.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets\css\bootstrapp.min.css' %}"> -->
+<link rel="stylesheet" type="text/css" href="{% static 'assets\css\Astyle.css' %}">
+
+
+<style>
+    .tabs2 {
+        background-image: url('path/to/your/image.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: #000000; /* Set text color to white or a suitable color for better contrast */
+        padding: 50px 0; /* Adjust the padding as needed */
+    }
+
+    .schedule-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        color: #333; /* Set text color for the table */
+    }
+
+    .schedule-table th, .schedule-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .schedule-table th {
+        background-color:  #5fb759;
+    }
+
+    .schedule-table td a {
+        display: block;
+        padding: 8px;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        background-color: #e6e6e6;
+        border-radius: 5px;
+    }
+
+    .schedule-table td a:hover {
+        background-color: #d4d4d4;
+    }
+</style>
+
+
+<section class="tabs2 cid-rRIj1OMqmW" id="tabs2-c">
+    <div class="container">
+        <div class="row title__wrap">
+            <div class="title__block col-sm-6">
+                <h1 class="mbr-section-subtitle mbr-semibold mbr-fonts-style display-4">Time slot And Availability</h1>
+            </div>
+        </div>
+        <div class="media-container-row">
+            <div class="col-12 col-md-12 plpr_0">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Time slot</th>
+                            <th>Total slots for bus</th>
+                            <th>Available slots for bus</th>
+                            <th>Total slots for 4 wheelers</th>
+                            <th>Available slots for 4 wheelers</th>
+                            <th>Total slots for 2 wheelers</th>
+                            <th>Available slots for 2 wheelers</th>
+
+                                                       
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:30 am – 10:30 am</td>
+                            <td>10</td>
+                            <td>6</td>
+                            <td>60</td>
+                            <td>12</td>
+                            <td>40</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>10:30 am – 12:30 pm</td>
+                            <td>10</td>
+                            <td>3</td>
+                            <td>60</td>
+                            <td>8</td>
+                            <td>40</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td>12:30 pm – 02:30 pm</td>
+                            <td>10</td>
+                            <td>1</td>
+                            <td>60</td>
+                            <td>22</td>
+                            <td>40</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>02:30 pm – 04:30 pm</td>
+                            <td>10</td>
+                            <td>3</td>
+                            <td>60</td>
+                            <td>5</td>
+                            <td>40</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+

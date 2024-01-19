@@ -1,0 +1,58 @@
+
+{% block body %}
+{% load static %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/regstyle.css' %}">
+
+<div class="row">
+    <section class="section">
+        <header>
+            <h3>Register</h3>
+            <h4>Please fill in your information below</h4>
+        </header>
+        <form role="form" name="form1" action="" method="post">
+            {% csrf_token %}
+            <main>
+                <div class="form-item box-item">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> Required field</small>
+
+                    <label for="phno">Phone Number</label>
+                    <input type="text" id="phno" name="phno" placeholder="Phone Number" required>
+                    <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> Required field</small>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> Required field</small>
+
+                    <label for="aadharid">Aadhar Id</label>
+                    <input type="text" id="aadharid" name="aadharid" placeholder="Aadhar Id" required>
+                    <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> Required field</small>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> Required field</small>
+                </div>
+
+
+                
+
+                <!-- Submit and Reset buttons moved outside the form-item div -->
+                <div class="form-item">
+                    <button type="submit" class="bn632-hover bn25">Submit</button>
+                    <button type="reset" class="bn632-hover bn25" id="rt" name="rt">Reset</button>
+                </div>
+
+            </main>
+        </form>
+
+        <footer>
+            <p>Already have an account? <a href="login">Login here</a></p>
+        </footer>
+
+        <i class="wave"></i>
+    </section>
+</div>
+{% endblock %}
