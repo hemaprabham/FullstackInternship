@@ -192,32 +192,32 @@
 <body>
     <div class="wrapper">
         <div class="title">
-          Payment
+          Refund
         </div>
         <div class="form">
            <div class="inputfield">
-              <label>Amount(based on people)</label>
+              <label>Account holder name</label>
               <input type="text" class="input">
            </div>  
             <div class="inputfield">
-              <label>Additional charge</label>
+              <label>Account no.</label>
               <input type="text" class="input">
            </div>  
            <div class="inputfield">
-              <label>Total amount</label>
+              <label>IFSC code</label>
               <input type="numbers" class="input">
            </div>  
             
           <div class="inputfield">
             <input type="submit" value="cancel" class="btn">
-            <input type="submit" value="Pay now" class="btn" onclick="redirectToAllPayment()">
+            <input type="submit" value="Send" class="btn" onclick="redirectToAllPayment()">
           </div>
         </div>
     </div>
     <script>
     function redirectToAllPayment() {
         // Redirect to the specified page
-        window.location.href = 'allpayment.html';
+        window.location.href = 'refundsuccess.html';
     }
 </script>
 </body>

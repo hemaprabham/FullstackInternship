@@ -41,28 +41,28 @@
                         <div class="card-body" style="height: 350px">
                             <div class="form-group">
                                 <label for="cc-number" class="control-label">CARD NUMBER</label>
-                                <input id="cc-number" type="tel" class="input-lg form-control cc-number" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" required>
+                                <input id="cc-number" type="tel" required class="input-lg form-control cc-number" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" required>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="cc-exp" class="control-label">CARD EXPIRY</label>
-                                        <input id="cc-exp" type="tel" class="input-lg form-control cc-exp" autocomplete="cc-exp" placeholder="•• / ••" required>
+                                        <input id="cc-exp" type="tel" required class="input-lg form-control cc-exp" autocomplete="cc-exp" placeholder="•• / ••" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="cc-cvc" class="control-label">CARD CVC</label>
-                                        <input id="cc-cvc" type="tel" class="input-lg form-control cc-cvc" autocomplete="off" placeholder="••••" required>
+                                        <input id="cc-cvc" required type="tel" class="input-lg form-control cc-cvc" autocomplete="off" placeholder="••••" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="numeric" class="control-label">CARD HOLDER NAME</label>
-                                <input type="text" class="input-lg form-control">
+                                <label for="numeric"  class="control-label">CARD HOLDER NAME</label>
+                                <input type="text" required class="input-lg form-control">
                             </div>
                             <div class="form-group">
-                                <input value="MAKE PAYMENT" type="button" class="btn btn-success btn-lg form-control" style="font-size: .8rem;">
+                                <input value="MAKE PAYMENT" type="button"onclick="redirectToAllPayment()" class="btn btn-success btn-lg form-control" style="font-size: .8rem;">
                             </div>
                         </div>
                     </div>
@@ -70,5 +70,11 @@
             </div>
         </div>
     </div>
+    <script>
+        function redirectToAllPayment() {
+            // Redirect to the specified page
+            window.location.href = 'successfulpayment.html';
+        }
+    </script>
 </body>
 </html>
