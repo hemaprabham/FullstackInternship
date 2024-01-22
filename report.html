@@ -7,52 +7,142 @@
     <title>Athirappalli waterfall tickets</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            body {
+                background-image: url('statics/img/banner5.jpg'); /* Replace with your image URL or path */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                padding: 0;
+                color: #fff;
+            }
+    
+            .overlay {
+                height: 100vh; /* Adjust the height as needed */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .card {
+                width: 30rem; /* Adjust the width as needed */
+                height: 20rem; /* Adjust the height as needed */
+                margin-top: 50px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                border: none;
+                border-radius: 15px;
+                overflow: hidden;
+                background: #292b2c; /* Adjust the background color as needed */
+                color: #fff;
+            }
+    
+            .card-body {
+                text-align: center;
+                padding: 50px; /* Adjust the padding as needed */
+            }
+    
+            .card-title {
+                color: #28a745;
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+    
+            .card button {
+                background-color: #28a745;
+                color: white;
+                padding: 10px 20px;
+                font-size: 18px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .dropdown-toggle {
+                background-color: #007bff; /* Change background color */
+                color: #fff; /* Change text color */
+            }
+
+            .dropdown-toggle:hover {
+                background-color: #0056b3; /* Change background color on hover */
+            }
+
+            .dropdown-menu {
+                background-color: #007bff; /* Change background color of the dropdown menu */
+                color: #fff; /* Change text color of the dropdown menu */
+            }
+
+            .dropdown-item {
+                color: #fff; /* Change text color of dropdown items */
+            }
+
+            .dropdown-item:hover {
+                background-color: #0056b3; /* Change background color of dropdown items on hover */
+            }
+        </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">WELCOME ADMIN</a>
+            <a class="navbar-brand" href="adminindex.html">WELCOME ADMIN</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="adminindex.html">Home</a>
                     <a class="nav-link" href="report.html">Generate Report</a>
                     <a class="nav-link" href="pricing.html">Pricing</a>
                     <a class="nav-link" href="ViewBookings.html">View Bookings</a>
-                    <a class="nav-link" href="parking.html">Manage Parking</a>
                     <a class="nav-link" href="redalert.html">Declare Red Alert</a>
                 </div>
             </div>
         </div>
     </nav>
-    <br>
-<center>
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Select category</h5>
-          <button onclick="goToAnotherPage()" style="background-color: green; color: white;">Vehicle</button>
-          <button onclick="goToAnotherPages()" style="background-color: green; color: white;">User</button>
-          <!-- <a href="{% url 'admin_page:vehiclereport' %}" class="card-link">Vehicle</a>
-          <a href="{% url 'admin_page:userreport' %}" class="card-link">User</a> -->
+
+    <div class="overlay">
+        <div class="card">
+            <br>
+            <br>
+            <center>
+                <div class="card-body">
+                    <h5 class="card-title">Select Category</h5>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="vehicleDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Vehicle
+                        </button>
+                        <button onclick="goToAnotherPages()">User</button>
+                        <ul class="dropdown-menu" aria-labelledby="vehicleDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="goToAnotherPage('four-wheelers')">Four Wheelers</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="goToAnotherPage('two-wheelers')">Two Wheelers</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="goToAnotherPage('bus')">Bus</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </center>
         </div>
-      </div>
-    </center>
-  
+    </div>
+
     <script>
-        // JavaScript function to change the page location
-        function goToAnotherPage() {
-            // Change 'your_page_url.html' to the actual URL of the page you want to link to
-            window.location.href = "vehiclereport.html";
+        function goToAnotherPage(vehicleType) {
+            // You can use the 'vehicleType' parameter to decide which page to navigate to
+            if (vehicleType === 'four-wheelers') {
+                window.location.href = "fourwheelers.html";
+            } else if (vehicleType === 'two-wheelers') {
+                window.location.href = "twowheelers.html";
+            } else if (vehicleType === 'bus') {
+                window.location.href = "bus.html";
+            }
         }
         function goToAnotherPages() {
-            // Change 'your_page_url.html' to the actual URL of the page you want to link to
             window.location.href = "userreport.html";
         }
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
